@@ -3,46 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>我的个人网站</title>
+    <title>Eric Wang's Personal Website</title>
     <style>
-        /* 原有的样式保持不变，这里不再重复 */
-        .language-switch {
-            position: fixed;
-            top: 10px;
-            right: 10px;
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
         }
-        .language-switch button {
-            padding: 5px 10px;
-            margin: 5px;
-            cursor: pointer;
+        .header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+        .nav {
+            background-color: #ddd;
+            padding: 10px 0;
+            text-align: center;
+        }
+        .nav a {
+            text-decoration: none;
+            color: #333;
+            margin: 0 15px;
+        }
+        .content {
+            margin: 20px;
+            padding: 20px;
+            background-color: #fff;
+        }
+        .footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
         }
     </style>
 </head>
 <body>
     <div class="header">
-        <h1>欢迎来到我的个人网站</h1>
+        <h1>Welcome to Eric's Personal Website</h1>
     </div>
     <div class="nav">
-        <a href="#">首页</a>
-        <a href="#">关于我</a>
-        <a href="#">作品展示</a>
-        <a href="#">联系方式</a>
-    </div>
-    <div class="language-switch">
-        <button onclick="switchLanguage('zh')">中文</button>
-        <button onclick="switchLanguage('en')">英文</button>
+        <a href="#">Main</a>
+        <a href="#">About Me</a>
+        <a href="#">Projects</a>
+        <a href="#">Contact</a>
     </div>
     <div class="content">
-        <!-- 内容区域保持不变 -->
+        <h2>About Me</h2>
+        <p>info...</p>
+        
+        <h2>Projects</h2>
+        <p>project...</p>
+        
+        <h2>Contact:</h2>
+        <p>Email：wangxiaoxian2016@gmail.com</p>
+        <p>LinkedIn：www.linkedin.com/in/xiaoxian-wang-a83b621b9</p>
+        <p>Phone Number：+1 236-984-1196</p>
     </div>
     <div class="footer">
-        <!-- 底部区域保持不变 -->
+        <p>copy; 2024 Eric Wang</p>
     </div>
-    <script>
-        // 切换语言函数，这里只是模拟切换，实际切换需要用户操作
-        function switchLanguage(lang) {
-            alert('请在操作系统或输入法设置中手动切换到' + (lang === 'zh' ? '中文' : '英文') + '输入法。');
-        }
-    </script>
 </body>
 </html>
