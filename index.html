@@ -51,7 +51,7 @@
             justify-content: center;
             opacity: 0;
             pointer-events: none;
-            transition: opacity 0.5s ease-in-out; /* 500ms fade transition */
+            transition: opacity 0.5s ease-in-out; 
         }
 
         .hero.active {
@@ -166,7 +166,6 @@
             <p class="intro-text text-2xl md:text-3xl lg:text-4xl">Hello, my name is:</p>
             <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold">Xiaoxian Wang.</h1>
             <h2 class="text-2xl sm:text-3xl md:text-4xl font-light mb-4">I believe Edge AI is the future.</h2>
-            <!-- Add margin-top (mt-4) for 1rem space -->
             <p class="text-lg text-gray-300 mb-4 mt-8">I'm a machine learning developer, quantitative trader and data analyst.</p>
             <p class="text-lg text-gray-300 mb-8">Currently developing a machine learning-driven quantitative trading strategy.</p>
             <a href="mailto:wangxiaoxian2016@gmail.com" class="contact-button px-6 py-3 border rounded transition">Get in touch</a>
@@ -177,6 +176,8 @@
     <!-- About Section -->
     <section id="about" class="hero">
         <div class="flex flex-col items-center justify-center text-center hero-text px-4 sm:px-6 lg:px-8">
+            <img src="intel_summit.jpg" alt="About Me Image" class="mb-4" style="width: 500px; height: auto;">
+
             <h1 class="text-4xl font-bold" style="font-size: 3rem;">Who am I?</h1>
             <p class="text-xl mt-4">I'm Xiaoxian Wang, a machine learning developer, quantitative trader, and data analyst.</p>
             <p class="text-lg mt-4">An Intel Student Ambassador and a Titanium member at Intel Partner Alliance.</p>
@@ -191,7 +192,7 @@
             </ul>
             <h3 class="text-4xl font-bold mt-8" style="font-size: 2rem; font-weight: 900;">Education & Scholarship</h3>
             <p class="text-lg mt-4">BA, Economics @ University of British Columbia(2021-2025)</p>
-            <p class="text-lg mt-4">International Student Scholarship Issued by Faculty of Arts</p>
+            <p class="text-lg mt-4 mb-16">International Student Scholarship Issued by Faculty of Arts</p>
         </div>
     </section>
 
@@ -220,6 +221,7 @@
     <!-- Contact Section -->
     <section id="contact" class="hero">
         <div class="text-center hero-text px-4 sm:px-6 lg:px-8">
+            <img src="kaer.jpg" alt="About Me Image" class="mb-4 mx-auto" style="width: 600px; height: auto;">
             <h1 class="text-4xl font-bold" style= "font-size: 3rem;" >Feel free to reach out via email or LinkedIn:</h1>
             <div class="mt-6">
                 <p class="text-lg">
@@ -230,7 +232,7 @@
                     <strong>Business Email: </strong>
                     <a href="mailto:ericwang@eii-tech.com" class="text-xl underline">ericwang@eii-tech.com</a>
                 </p>
-                <p class="text-lg mt-4">
+                <p class="text-lg mt-4 mb-16">
                     <strong>LinkedIn: </strong>
                     <a href="https://www.linkedin.com/in/xiaoxian-wang-a83b621b9" class="text-xl underline" target="_blank">www.linkedin.com/in/xiaoxian-wang-a83b621b9</a>
                 </p>
@@ -249,7 +251,7 @@
 
                 setTimeout(() => {
                     newSection.classList.add('active');
-                }, 500); // 500ms fade-out duration
+                }, 500); 
             }
         }
     </script>
