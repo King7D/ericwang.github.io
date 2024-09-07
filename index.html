@@ -39,7 +39,7 @@
             align-items: center;
             justify-content: center;
             color: white;
-            animation: gradientShift 30s ease-in-out infinite; 
+            animation: gradientShift 30s ease-in-out infinite;
         }
 
         .hero.active {
@@ -57,8 +57,38 @@
             margin-bottom: 1.5rem;
         }
 
+        @media (min-width: 640px) {
+            .hero-text h1 {
+                font-size: 5rem;
+            }
+
+            .hero-text h2 {
+                font-size: 3rem;
+            }
+        }
+
+        @media (min-width: 768px) {
+            .hero-text h1 {
+                font-size: 6rem;
+            }
+
+            .hero-text h2 {
+                font-size: 3.5rem;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .hero-text h1 {
+                font-size: 7rem;
+            }
+
+            .hero-text h2 {
+                font-size: 4rem;
+            }
+        }
+
         .nav-item {
-            color: white; /* White color for the navigation items */
+            color: white;
             transition: color 0.3s ease;
         }
 
@@ -72,17 +102,17 @@
 
         .intro-text {
             font-size: 2rem;
-            color: #f39c12; /* Orange color */
+            color: #f39c12;
         }
 
         .contact-button {
-            color: #f39c12; /* Orange for "Get in touch" */
-            border-color: #f39c12; /* Orange border */
+            color: #f39c12;
+            border-color: #f39c12;
         }
 
         .contact-button:hover {
-            background-color: #f39c12; /* Orange background on hover */
-            color: white; /* White text on hover */
+            background-color: #f39c12;
+            color: white;
         }
     </style>
 </head>
@@ -102,11 +132,11 @@
     </header>
 
     <!-- Home Section -->
-    <section id="home" class="hero active">
-        <div class="text-center hero-text">
-            <p class="intro-text">Hello, my name is:</p>
-            <h1>Xiaoxian Wang.</h1>
-            <h2>I believe Edge AI is the future.</h2>
+    <section id="home" class="hero active w-full h-screen flex items-center justify-center">
+        <div class="text-center hero-text px-4 sm:px-6 lg:px-8">
+            <p class="intro-text text-2xl md:text-3xl lg:text-4xl">Hello, my name is:</p>
+            <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold">Xiaoxian Wang.</h1>
+            <h2 class="text-2xl sm:text-3xl md:text-4xl font-light mb-4">I believe Edge AI is the future.</h2>
             <p class="text-lg text-gray-300 mb-8">I'm a machine learning developer, quantitative trader and data analyst.</p>
             <p class="text-lg text-gray-300 mb-8">Currently developing a machine learning-driven quantitative trading strategy.</p>
             <a href="mailto:wangxiaoxian2016@gmail.com" class="contact-button px-6 py-3 border rounded transition">Get in touch</a>
@@ -114,8 +144,8 @@
     </section>
 
     <!-- About Section -->
-    <section id="about" class="hero">
-        <div class="text-center hero-text">
+    <section id="about" class="hero w-full h-screen flex items-center justify-center">
+        <div class="text-center hero-text px-4 sm:px-6 lg:px-8">
             <h1 class="text-4xl font-bold">Who am I?</h1>
             <p class="text-xl mt-4">I'm Xiaoxian Wang, a machine learning developer, quantitative trader, and data analyst.</p>
             <p class="text-lg mt-4 max-w-2xl">I'm an Intel Student Ambassador and a Titanium member at Intel Partner Alliance.</p>
@@ -123,8 +153,8 @@
     </section>
 
     <!-- Projects Section -->
-    <section id="projects" class="hero">
-        <div class="text-center hero-text">
+    <section id="projects" class="hero w-full h-screen flex items-center justify-center">
+        <div class="text-center hero-text px-4 sm:px-6 lg:px-8">
             <h1 class="text-4xl font-bold">Projects</h1>
             <ul class="text-lg mt-4 max-w-2xl list-disc list-inside">
                 <li>Youtube Converter</li>
@@ -141,8 +171,8 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="hero">
-        <div class="text-center hero-text">
+    <section id="contact" class="hero w-full h-screen flex items-center justify-center">
+        <div class="text-center hero-text px-4 sm:px-6 lg:px-8">
             <h1 class="text-xl mt-4">Feel free to reach out via email or LinkedIn:</h1>
             <div class="mt-6">
                 <p class="text-lg">
