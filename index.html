@@ -16,6 +16,10 @@
             animation: gradientShift 30s ease-in-out infinite;
             min-height: 100vh;
             color: white;
+            margin: 0;
+            padding: 0;
+            position: relative;
+            overflow-x: hidden;
         }
 
         @keyframes gradientShift {
@@ -37,14 +41,22 @@
         }
 
         .hero {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
             min-height: 100vh;
-            display: none;
+            display: flex;
             align-items: center;
             justify-content: center;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.5s ease-in-out; /* 500ms fade transition */
         }
 
         .hero.active {
-            display: flex;
+            opacity: 1;
+            pointer-events: all;
         }
 
         .hero-text h1 {
@@ -58,27 +70,6 @@
             font-size: 2rem;
             font-weight: 300;
             margin-bottom: 1rem;
-        }
-
-        #about h1 {
-            font-size: 3rem;
-        }
-
-        #about h2 {
-            font-size: 2rem;
-            margin-top: 1rem;
-        }
-
-        #projects h1 {
-            font-size: 3rem;
-        }
-
-        #contact h1 {
-            font-size: 3rem;
-        }
-
-        #about p, #projects ul, #contact div {
-            margin-top: 1.5rem;
         }
 
         @media (min-width: 640px) {
@@ -111,18 +102,15 @@
             }
         }
 
-        .nav-item, .logo-item {
+        .nav-item,
+        .logo-item {
             color: white;
             transition: color 0.3s ease;
         }
 
-        .nav-item:hover, .logo-item:hover {
+        .nav-item:hover,
+        .logo-item:hover {
             color: #38bdf8;
-        }
-
-        .intro-text {
-            font-size: 2rem;
-            color: #f39c12;
         }
 
         .contact-button {
@@ -145,6 +133,10 @@
             background-color: #f39c12;
             text-decoration: none;
         }
+
+        header {
+            z-index: 999;
+        }
     </style>
 </head>
 
@@ -153,7 +145,6 @@
     <!-- Navbar -->
     <header class="absolute top-0 left-0 w-full p-5">
         <nav class="container mx-auto flex justify-between items-center">
-            <!-- Add class logo-item to apply hover effect -->
             <a href="#" class="text-white font-bold text-lg logo-item" onclick="showSection(event, 'home')">XW</a>
             <ul class="flex space-x-6">
                 <li><a href="#" class="nav-item" onclick="showSection(event, 'about')">About</a></li>
@@ -164,44 +155,48 @@
     </header>
 
     <!-- Home Section -->
-    <section id="home" class="hero active w-full h-screen flex items-center justify-center">
+    <section id="home" class="hero active">
         <div class="text-center hero-text px-4 sm:px-6 lg:px-8">
             <p class="intro-text text-2xl md:text-3xl lg:text-4xl">Hello, my name is:</p>
             <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold">Xiaoxian Wang.</h1>
             <h2 class="text-2xl sm:text-3xl md:text-4xl font-light mb-4">I believe Edge AI is the future.</h2>
-            <p class="text-lg text-gray-300 mb-8">I'm a machine learning developer, quantitative trader and data analyst.</p>
+            <!-- Add margin-top (mt-4) for 1rem space -->
+            <p class="text-lg text-gray-300 mb-4 mt-8">I'm a machine learning developer, quantitative trader and data analyst.</p>
             <p class="text-lg text-gray-300 mb-8">Currently developing a machine learning-driven quantitative trading strategy.</p>
             <a href="mailto:wangxiaoxian2016@gmail.com" class="contact-button px-6 py-3 border rounded transition">Get in touch</a>
         </div>
     </section>
+    
 
     <!-- About Section -->
-    <section id="about" class="hero w-full h-screen flex items-center justify-center">
-        <div class="text-center hero-text px-4 sm:px-6 lg:px-8">
-            <h1 class="text-4xl font-bold">Who am I?</h1>
+    <section id="about" class="hero">
+        <div class="flex flex-col items-center justify-center text-center hero-text px-4 sm:px-6 lg:px-8">
+            <h1 class="text-4xl font-bold" style="font-size: 3rem;">Who am I?</h1>
             <p class="text-xl mt-4">I'm Xiaoxian Wang, a machine learning developer, quantitative trader, and data analyst.</p>
             <p class="text-lg mt-4">An Intel Student Ambassador and a Titanium member at Intel Partner Alliance.</p>
-            <h2 class="text-4xl font-bold">Licenses & Certifications</h2>
-            <li>Microsoft Certified: Azure AI Fundamentals(AI-900)</li>
-            <li>Microsoft Office Specialist - Expert Microsoft 365 Apps</li>
-            <li>Intel Edge AI Developer Certification</li>
-            <li>Google Analytics Certification</li>
-            <li>Google IT Support Professional Certificate</li>
-            <li>CFI AI for Excel Formulas</li>
-            
+            <h2 class="text-4xl font-bold mt-8" style="font-size: 2rem; font-weight: 900;">Licenses & Certifications</h2>
+            <ul class="list-none mt-4">
+                <li>Microsoft Certified: Azure AI Fundamentals(AI-900)</li>
+                <li>Microsoft Office Specialist - Expert Microsoft 365 Apps</li>
+                <li>Intel Edge AI Developer Certification</li>
+                <li>Google Analytics Certification</li>
+                <li>Google IT Support Professional Certificate</li>
+                <li>CFI AI for Excel Formulas</li>
+            </ul>
         </div>
     </section>
 
+
     <!-- Projects Section -->
-    <section id="projects" class="hero w-full h-screen flex items-center justify-center">
-        <div class="text-center hero-text px-4 sm:px-6 lg:px-8">
-            <h1 class="text-4xl font-bold">Projects</h1>
-            <ul class="text-lg mt-4 max-w-2xl list-disc list-inside">
-                <li>Youtube Converter</li>
-                <li>Campus Bullying Detection System</li>
-                <li>Heart Disease Prediction</li>
-            </ul>
-            <p class="text-xl mt-6 font-bold">Here are some of the projects I'm currently working on:</p>
+    <section id="projects" class="hero">
+        <div class="flex flex-col items-center justify-center text-center hero-text px-4 sm:px-6 lg:px-8">
+            <h1 class="text-4xl font-bold" style="font-size: 3rem;">Projects</h1>
+                <ul class="text-lg mt-4 max-w-2xl list-disc list-inside">
+                    <li>Youtube Converter</li>
+                    <li>Campus Bullying Detection System</li>
+                    <li>Heart Disease Prediction</li>
+                </ul>
+            <p class="text-4xl font-bold mt-8" style="font-size: 2rem;">Here are some of the projects I'm currently working on:</p>
             <ul class="text-lg mt-4 max-w-2xl list-disc list-inside">
                 <li>Machine learning-driven quantitative trading strategy</li>
                 <li>Edge Computing Distribution for AI Acceleration & CDN Deployment</li>
@@ -211,10 +206,11 @@
         </div>
     </section>
 
+
     <!-- Contact Section -->
-    <section id="contact" class="hero w-full h-screen flex items-center justify-center">
+    <section id="contact" class="hero">
         <div class="text-center hero-text px-4 sm:px-6 lg:px-8">
-            <h1 class="text-3xl font-bold">Feel free to reach out via email or LinkedIn:</h1>
+            <h1 class="text-4xl font-bold" style= "font-size: 3rem;" >Feel free to reach out via email or LinkedIn:</h1>
             <div class="mt-6">
                 <p class="text-lg">
                     <strong>Personal Email: </strong>
@@ -234,14 +230,17 @@
 
     <script>
         function showSection(event, sectionId) {
-            event.preventDefault();  // Prevent default link behavior
-            const sections = document.querySelectorAll('.hero');
-            sections.forEach(section => {
-                section.classList.remove('active');
-                section.style.display = 'none';  // Hide all sections
-            });
-            document.getElementById(sectionId).style.display = 'flex';  // Show selected section
-            document.getElementById(sectionId).classList.add('active');  // Add active class for animations
+            event.preventDefault();
+            const activeSection = document.querySelector('.hero.active');
+            const newSection = document.getElementById(sectionId);
+
+            if (activeSection !== newSection) {
+                activeSection.classList.remove('active');
+
+                setTimeout(() => {
+                    newSection.classList.add('active');
+                }, 500); // 500ms fade-out duration
+            }
         }
     </script>
 
