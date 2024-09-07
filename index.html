@@ -13,7 +13,6 @@
             font-family: 'Roboto', sans-serif;
         }
 
-        /* Define smoother and slower keyframes for background gradient animation */
         @keyframes gradientShift {
             0% {
                 background-position: 0% 50%;
@@ -40,7 +39,7 @@
             align-items: center;
             justify-content: center;
             color: white;
-            animation: gradientShift 30s ease-in-out infinite; /* Slower (30s) and smoother (ease-in-out) animation */
+            animation: gradientShift 30s ease-in-out infinite; 
         }
 
         .hero.active {
@@ -59,7 +58,7 @@
         }
 
         .nav-item {
-            color: #94a3b8;
+            color: white; /* White color for the navigation items */
             transition: color 0.3s ease;
         }
 
@@ -71,19 +70,18 @@
             display: none;
         }
 
-        /* Changes to make text a lighter purple and adjust font size */
         .intro-text {
             font-size: 2rem;
-            color: #9b59b6; /* Lighter purple */
+            color: #f39c12; /* Orange color */
         }
 
         .contact-button {
-            color: #9b59b6; /* Lighter purple text for "Get in touch" */
-            border-color: #9b59b6; /* Lighter purple border */
+            color: #f39c12; /* Orange for "Get in touch" */
+            border-color: #f39c12; /* Orange border */
         }
 
         .contact-button:hover {
-            background-color: #9b59b6; /* Lighter purple background on hover */
+            background-color: #f39c12; /* Orange background on hover */
             color: white; /* White text on hover */
         }
     </style>
