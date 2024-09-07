@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Personal Portfolio</title>
+    <title>Xiaoxian Wang's Website</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap">
     <style>
@@ -13,13 +13,34 @@
             font-family: 'Roboto', sans-serif;
         }
 
+        /* Define smoother and slower keyframes for background gradient animation */
+        @keyframes gradientShift {
+            0% {
+                background-position: 0% 50%;
+            }
+            25% {
+                background-position: 50% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            75% {
+                background-position: 50% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
         .hero {
-            background: linear-gradient(to right, #0f172a, #1e3a8a);
+            background: linear-gradient(270deg, #0f172a, #1e3a8a, #3b82f6, #38bdf8);
+            background-size: 400% 400%;
             min-height: 100vh;
             display: none;
             align-items: center;
             justify-content: center;
             color: white;
+            animation: gradientShift 30s ease-in-out infinite; /* Slower (30s) and smoother (ease-in-out) animation */
         }
 
         .hero.active {
@@ -49,6 +70,22 @@
         .hidden {
             display: none;
         }
+
+        /* Changes to make text a lighter purple and adjust font size */
+        .intro-text {
+            font-size: 2rem;
+            color: #9b59b6; /* Lighter purple */
+        }
+
+        .contact-button {
+            color: #9b59b6; /* Lighter purple text for "Get in touch" */
+            border-color: #9b59b6; /* Lighter purple border */
+        }
+
+        .contact-button:hover {
+            background-color: #9b59b6; /* Lighter purple background on hover */
+            color: white; /* White text on hover */
+        }
     </style>
 </head>
 
@@ -69,12 +106,12 @@
     <!-- Home Section -->
     <section id="home" class="hero active">
         <div class="text-center hero-text">
-            <p class="text-lg text-teal-400 mb-4">Hello, my name is:</p>
+            <p class="intro-text">Hello, my name is:</p>
             <h1>Xiaoxian Wang.</h1>
             <h2>I believe Edge AI is the future.</h2>
             <p class="text-lg text-gray-300 mb-8">I'm a machine learning developer, quantitative trader and data analyst.</p>
             <p class="text-lg text-gray-300 mb-8">Currently developing a machine learning-driven quantitative trading strategy.</p>
-            <a href="mailto:wangxiaoxian2016@gmail.com" class="px-6 py-3 border border-teal-400 text-teal-400 rounded hover:bg-teal-400 hover:text-gray-900 transition">Get in touch</a>
+            <a href="mailto:wangxiaoxian2016@gmail.com" class="contact-button px-6 py-3 border rounded transition">Get in touch</a>
         </div>
     </section>
 
@@ -84,7 +121,6 @@
             <h1 class="text-4xl font-bold">Who am I?</h1>
             <p class="text-xl mt-4">I'm Xiaoxian Wang, a machine learning developer, quantitative trader, and data analyst.</p>
             <p class="text-lg mt-4 max-w-2xl">I'm an Intel Student Ambassador and a Titanium member at Intel Partner Alliance.</p>
-            <p class="text-lg mt-4 max-w-2xl"></p>
         </div>
     </section>
 
@@ -92,11 +128,16 @@
     <section id="projects" class="hero">
         <div class="text-center hero-text">
             <h1 class="text-4xl font-bold">Projects</h1>
-            <p class="text-xl mt-4">Here are some of the projects I'm currently working on:</p>
             <ul class="text-lg mt-4 max-w-2xl list-disc list-inside">
                 <li>Youtube Converter</li>
                 <li>Campus Bullying Detection System</li>
                 <li>Heart Disease Prediction</li>
+            </ul>
+            <p class="text-xl mt-6">Here are some of the projects I'm currently working on:</p>
+            <ul class="text-lg mt-4 max-w-2xl list-disc list-inside">
+                <li>Machine learning-driven quantitative trading strategy</li>
+                <li>Intel Edge Solutions Challenge: Edge AI for Smart Cities & Transportation</li>
+                <li>AI vs Market Volatility</li>
             </ul>
         </div>
     </section>
@@ -104,19 +145,21 @@
     <!-- Contact Section -->
     <section id="contact" class="hero">
         <div class="text-center hero-text">
-<h1 class="text-xl mt-4">Feel free to reach out via email or LinkedIn:</h1>
-        <div class="mt-6">
-            <p class="text-lg">
-                <strong>Personal Email: </strong>
-                <a href="mailto:wangxiaoxian2016@gmail.com" class="text-teal-400 text-xl underline">wangxiaoxian2016@gmail.com</a>
-            </p>
-            <p class="text-lg mt-4">
-                <strong>Business Email: </strong>
-                <a href="mailto:ericwang@eii-tech.com" class="text-teal-400 text-xl underline">ericwang@eii-tech.com</a>
-            </p>
-            <p class="text-lg mt-4">
-                <strong>LinkedIn: </strong>
-                <a href="https://www.linkedin.com/in/xiaoxian-wang-a83b621b9" class="text-teal-400 text-xl underline" target="_blank">www.linkedin.com/in/xiaoxian-wang-a83b621b9</a>
+            <h1 class="text-xl mt-4">Feel free to reach out via email or LinkedIn:</h1>
+            <div class="mt-6">
+                <p class="text-lg">
+                    <strong>Personal Email: </strong>
+                    <a href="mailto:wangxiaoxian2016@gmail.com" class="text-teal-400 text-xl underline">wangxiaoxian2016@gmail.com</a>
+                </p>
+                <p class="text-lg mt-4">
+                    <strong>Business Email: </strong>
+                    <a href="mailto:ericwang@eii-tech.com" class="text-teal-400 text-xl underline">ericwang@eii-tech.com</a>
+                </p>
+                <p class="text-lg mt-4">
+                    <strong>LinkedIn: </strong>
+                    <a href="https://www.linkedin.com/in/xiaoxian-wang-a83b621b9" class="text-teal-400 text-xl underline" target="_blank">www.linkedin.com/in/xiaoxian-wang-a83b621b9</a>
+                </p>
+            </div>
         </div>
     </section>
 
