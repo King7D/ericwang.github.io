@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Head Content -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campus Bullying Detection System</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: linear-gradient(270deg, #0f172a, #1e3a8a, #3b82f6, #38bdf8);
+            background-size: 400% 400%;
+            animation: gradientShift 30s ease-in-out infinite;
+            min-height: 100vh;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            opacity: 0; /* Set initial opacity to 0 */
+            transition: opacity 0.5s ease-in-out; /* Smooth transition */
+        }
+
+        @keyframes gradientShift {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            25% {
+                background-position: 50% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            75% {
+                background-position: 50% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        .content {
+            max-width: 800px;
+            text-align: center;
+            padding: 2rem;
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+        }
+
+        p {
+            font-size: 1rem;
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+        }
+
+        /* Remove bullet points */
+        ul.point-form {
+            list-style-type: none;  /* Removes the bullet points */
+            padding-left: 0;  /* Removes padding */
+            margin: 0; /* Removes any margin */
+        }
+
+        ul.point-form li {
+            margin-bottom: 1rem;  /* Adds some space between the list items */
+        }
+
+        .back-button {
+            display: inline-block;
+            margin-top: 2rem;
+            padding: 10px 20px;
+            border: 2px solid #f39c12;
+            border-radius: 5px;
+            text-decoration: none;
+            color: #f39c12;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .back-button:hover {
+            background-color: #f39c12;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="content">
+        <h1 style="font-size: 2.5rem" class=mt-4;>Campus Bullying Detection System</h1>
+        <p style="font-size: 1rem;">This project aims to assist Shandong Kaer Electronic Co., Ltd to develop an
+            automated system capable of detecting bullying in campus conversations. By leveraging machine learning techniques,
+            the system analyzes student dialogues and identifies potential instances of bullying. This enables schools to
+            intervene promptly and effectively, ensuring a safer environment for students.</p>
+
+        <h2 style="font-size: 2rem" class=mt-4;>Key Features</h2>
+        <ul class="point-form">
+            <li>Real-time bullying detection using audio surveillance</li>
+            <li>Natural Language Processing (NLP) for identifying harmful language in conversations</li>
+            <li>Integration with school monitoring systems for immediate alerts</li>
+            <li>Data analytics and reporting to track incidents</li>
+        </ul>
+
+        <h3 style="font-size: 2rem" class=mt-4>Technologies Used</h3>
+        <ul class="point-form">
+            <li>Excel for model pre-processing and analysis</li>
+            <li>GPT-4 and ChatGLM for data clustering</li>
+            <li>Real-time voice-to-text conversion</li>
+            <li>Machine Learning models for text analysis</li>
+            <li>Python, TensorFlow</li>
+        </ul>
+
+        <a href="#" class="back-button mb-16" id="backToProjects">Back to Projects</a>
+    </div>
+
+    <script>
+        // Add fade-in effect on page load
+        window.addEventListener('load', function () {
+            document.body.style.opacity = 1;
+        });
+
+        // Add fade-out effect on back button click
+        document.getElementById('backToProjects').addEventListener('click', function (e) {
+            e.preventDefault();
+            document.body.style.opacity = 0;
+            setTimeout(function () {
+                window.location.href = "../index.html#projects";
+            }, 500);
+        });
+    </script>
+
+</body>
+
+</html>

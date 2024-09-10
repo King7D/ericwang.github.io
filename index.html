@@ -187,7 +187,7 @@
     <!-- About Section -->
     <section id="about" class="hero">
         <div class="flex flex-col items-center justify-center text-center hero-text px-4 sm:px-6 lg:px-8">
-            <img src="intel_summit.jpg" alt="About Me Image" class="mt-16 rounded-lg" style="width: 500px; height: auto;">
+            <img src="pictures/intel_summit.jpg" alt="intel summit" class="mt-16 rounded-lg" style="width: 500px; height: auto;">
             <p class="text-lg mb-4">Participated in the 2023 Intel LOEM Summit In Macau</p>
             <h1 class="text-4xl font-bold" style="font-size: 3rem;">Who am I?</h1>
             <p class="text-xl mt-4">Iam Xiaoxian Wang, a machine learning developer,a quantitative trader, and a data analyst.</p>
@@ -208,7 +208,7 @@
             <p class="text-lg mt-4 mb-16">Recipient of the International Student Scholarship, issued by the Faculty of Arts</p>
 
             <h4 class="text-4xl font-bold mt-8" style="font-size: 2rem; font-weight:900;"></h4>
-            <img src="group_picture.jpg" alt="About Me Image" class="rounded-lg" style="width: 500px; height: auto;">
+            <img src="pictures\group_picture.jpg" alt="group picture" class="rounded-lg" style="width: 500px; height: auto;">
             <p class="text-lg mb-16">Group picture with John Kalvin (Intel Global Go-To-Market Operations VP & GM), Dave Guzzi (Intel Global Distribution & Partner Sales VP) and Ye Zong (Intel PRC GM)</p>
         </div>
     </section>
@@ -219,7 +219,7 @@
         <div class="flex flex-col items-center justify-center text-center hero-text px-4 sm:px-6 lg:px-8">
             <h1 class="text-4xl font-bold" style="font-size: 3rem;">Projects</h1>
                 <ul class="text-lg mt-4 max-w-2xl list-disc list-inside">
-                    <li>Campus Bullying Detection System</li>
+                    <li><a href="projects/campus-bullying.html" class="text-orange-500 hover:underline">Campus Bullying Detection System</a></li>
                     <li>EvoNAS Operating System</li>
                     <li>Heart Disease Prediction</li>
                     <li>Inventory Tracking System</li>
@@ -242,7 +242,7 @@
     <!-- Contact Section -->
     <section id="contact" class="hero">
         <div class="text-center hero-text px-4 sm:px-6 lg:px-8">
-            <img src="kaer.jpg" alt="About Me Image" class="mx-auto mt-16 rounded-lg" style="width: 600px; height: auto;">
+            <img src="pictures\kaer.jpg" alt="Kaer" class="mx-auto mt-16 rounded-lg" style="width: 600px; height: auto;">
             <p class="text-lg mb-4">Wall of Fame at Shandong Kaer Electronic Co., Ltd</p>
             <h1 class="text-4xl font-bold" style="font-size: 2.5rem;">Feel free to reach out via email or LinkedIn:</h1>
             <div class="mt-6">
@@ -264,20 +264,40 @@
 
 
     <script>
+        // Show the section based on the anchor link
         function showSection(event, sectionId) {
-            event.preventDefault();
+            if (event) {
+                event.preventDefault();
+            }
+            
             const activeSection = document.querySelector('.hero.active');
             const newSection = document.getElementById(sectionId);
-
+    
             if (activeSection !== newSection) {
                 activeSection.classList.remove('active');
-
+    
                 setTimeout(() => {
                     newSection.classList.add('active');
-                }, 500); 
+                }, 500);
             }
         }
+    
+        // Function to handle anchor links (like #projects)
+        function handleAnchorLinks() {
+            const hash = window.location.hash; // Get the current hash from the URL
+            if (hash) {
+                const sectionId = hash.substring(1); // Remove the # from the hash
+                const section = document.getElementById(sectionId);
+                if (section) {
+                    showSection(null, sectionId); // Show the section
+                }
+            }
+        }
+    
+        // Call handleAnchorLinks when the page loads
+        window.addEventListener('load', handleAnchorLinks);
     </script>
+    
 
 </body>
 
