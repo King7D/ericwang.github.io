@@ -5,7 +5,7 @@
     <!-- Head Content -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Campus Bullying Detection System</title>
+    <title>EvoNAS System Description</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap">
@@ -68,13 +68,13 @@
 
         /* Remove bullet points */
         ul.point-form {
-            list-style-type: none;  /* Removes the bullet points */
-            padding-left: 0;  /* Removes padding */
-            margin: 0; /* Removes any margin */
+            list-style-type: none;
+            padding-left: 0;
+            margin: 0;
         }
 
         ul.point-form li {
-            margin-bottom: 1rem;  /* Adds some space between the list items */
+            margin-bottom: 1rem;
         }
 
         .back-button {
@@ -98,42 +98,37 @@
 <body>
 
     <div class="content">
-        <h1 style="font-size: 2.5rem" class=mt-4;>Campus Bullying Detection System</h1>
-        <p style="font-size: 1rem;">This project aims to assist Shandong Kaer Electronic Co., Ltd to develop an
-            automated system capable of detecting bullying in campus conversations. By leveraging machine learning techniques,
-            the system analyzes student dialogues and identifies potential instances of bullying. This enables schools to
-            intervene promptly and effectively, ensuring a safer environment for students.</p>
-
+        <h1 style="font-size: 2.5rem" class=mt-4;>EvoNAS - An Affordable Network Attached Storage Solution</h1>
+        <p style="font-size: 1rem;">EvoNAS is a robust NAS (Network Attached Storage) system built on the reliable foundation of Debian OS, 
+            designed to provide seamless and secure data storage solutions. EvoNAS offers users a web-based control panel for 
+            managing various aspects of their storage system, including system monitoring, user management, and service 
+            configuration.</p>
+        <img src="pictures/naslogin.png" alt="NAS Login" class="mt-4 rounded-lg" style="width: 400px; height: auto;">
+        <p class="text-lg mb-4">EvoNAS Login Page</p>
         <h2 style="font-size: 2rem" class=mt-4;>Key Features</h2>
         <ul class="point-form">
-            <li>Real-time bullying detection using audio surveillance</li>
-            <li>Natural Language Processing (NLP) for identifying harmful language in conversations</li>
-            <li>Integration with school monitoring systems for immediate alerts</li>
-            <li>Data analytics and reporting to track incidents</li>
+            <li>User-Friendly Interface: EvoNAS includes an intuitive web-based control panel, where users can easily manage system settings, 
+                view real-time performance metrics, and monitor network activity.</li>
+            <li>Comprehensive Data Sharing Services: EvoNAS supports multiple data-sharing protocols, making 
+                it compatible with a wide variety of operating systems and devices, ensuring easy integration in mixed environments.</li>
+            <li>Advanced Security: The platform provides essential features such as password and username management to ensure that data is securely
+                accessible. The login page is fortified with a clean design, responsive layout, and the ability to switch languages between English and Chinese.</li>
+            <li>Debian-Based Stability: Built on Debian OS, EvoNAS inherits the stability and security of the underlying Linux system, ensuring that 
+                your data is always safe and the system runs smoothly.</li>
+            <li>Power-Efficient Performance: Leveraging the lightweight and efficient nature of Linux, EvoNAS optimizes energy consumption without 
+                sacrificing performance, making it a reliable and eco-friendly solution for continuous operation.</li>
         </ul>
+        <img src="pictures/nascontrol.png" alt="NAS Login" class="mt-4 rounded-lg" style="width: 1200px; height: auto;">
+        <p class="text-lg mb-4">EvoNAS Control Panel</p>
 
-        <h3 style="font-size: 2rem" class=mt-4>Technologies Used</h3>
-        <ul class="point-form">
-            <li>Excel for model pre-processing and analysis</li>
-            <li>GPT-4 and ChatGLM for data clustering</li>
-            <li>Real-time voice-to-text conversion</li>
-            <li>Machine Learning models for text analysis</li>
-            <li>Python, TensorFlow</li>
-        </ul>
-        <p class="text-lg mt-4">
-            <a href="https://github.com/King7D/Campus-Bullying-Detection-System" class="contact-button px-6 py-3 border rounded transition" target="_blank">Concept</a>
-        </p>
-
-        <a href="#" class="back-button mb-16" id="backToProjects">Back to Projects</a>
+        <a href="#" class="back-button mt-4 mb-16" id="backToProjects">Back to Projects</a>
     </div>
 
     <script>
-        // Add fade-in effect on page load
         window.addEventListener('load', function () {
             document.body.style.opacity = 1;
         });
 
-        // Add fade-out effect on back button click
         document.getElementById('backToProjects').addEventListener('click', function (e) {
             e.preventDefault();
             document.body.style.opacity = 0;

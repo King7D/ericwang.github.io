@@ -2,10 +2,9 @@
 <html lang="en">
 
 <head>
-    <!-- Head Content -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Campus Bullying Detection System</title>
+    <title>Heart Disease Prediction Model</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap">
@@ -60,21 +59,24 @@
             margin-bottom: 1.5rem;
         }
 
+        h2 {
+            font-size: 2rem;
+            margin-top: 1.5rem;
+        }
+
         p {
             font-size: 1rem;
             line-height: 1.8;
             margin-bottom: 1.5rem;
         }
 
-        /* Remove bullet points */
-        ul.point-form {
-            list-style-type: none;  /* Removes the bullet points */
-            padding-left: 0;  /* Removes padding */
-            margin: 0; /* Removes any margin */
+        ul {
+            list-style-type: none;
+            padding-left: 0;
         }
 
-        ul.point-form li {
-            margin-bottom: 1rem;  /* Adds some space between the list items */
+        ul li {
+            margin-bottom: 1rem;
         }
 
         .back-button {
@@ -98,30 +100,28 @@
 <body>
 
     <div class="content">
-        <h1 style="font-size: 2.5rem" class=mt-4;>Campus Bullying Detection System</h1>
-        <p style="font-size: 1rem;">This project aims to assist Shandong Kaer Electronic Co., Ltd to develop an
-            automated system capable of detecting bullying in campus conversations. By leveraging machine learning techniques,
-            the system analyzes student dialogues and identifies potential instances of bullying. This enables schools to
-            intervene promptly and effectively, ensuring a safer environment for students.</p>
+        <h1 style="font-size: 2.5rem">Heart Disease Prediction Model</h1>
+        <p>Heart disease remains a leading cause of mortality globally, with early detection playing a crucial role in managing and mitigating its impact. Utilizing advanced machine learning techniques, this project aims to enhance predictive models that assess the likelihood of heart disease based on various predictors. These models are instrumental in aiding healthcare professionals to diagnose heart disease swiftly and with greater accuracy, thereby facilitating prompt and effective medical interventions.</p>
 
-        <h2 style="font-size: 2rem" class=mt-4;>Key Features</h2>
-        <ul class="point-form">
-            <li>Real-time bullying detection using audio surveillance</li>
-            <li>Natural Language Processing (NLP) for identifying harmful language in conversations</li>
-            <li>Integration with school monitoring systems for immediate alerts</li>
-            <li>Data analytics and reporting to track incidents</li>
-        </ul>
+        <h2>Project Objective</h2>
+        <p>The primary objective of this project is to develop a predictive model using the Cleveland Heart Disease dataset. This model will estimate the likelihood of an individual having heart disease based on medical attributes and lifestyle factors, specifically focusing on the ability to predict the severity of heart disease using variables such as chest pain type, resting blood pressure, and thalassemia across different age groups and genders.</p>
 
-        <h3 style="font-size: 2rem" class=mt-4>Technologies Used</h3>
-        <ul class="point-form">
-            <li>Excel for model pre-processing and analysis</li>
-            <li>GPT-4 and ChatGLM for data clustering</li>
-            <li>Real-time voice-to-text conversion</li>
-            <li>Machine Learning models for text analysis</li>
-            <li>Python, TensorFlow</li>
+        <h2>Dataset Description</h2>
+        <p>The Cleveland Heart Disease dataset includes data from individuals evaluated for heart disease at the Cleveland Clinic Foundation. The dataset features the following key attributes used in our predictive modeling:</p>
+        <ul>
+            <li>Chest Pain Type: Type of chest pain experienced by the patient.</li>
+            <li>Resting Blood Pressure: The resting blood pressure level of an individual.</li>
+            <li>Thalassemia: A blood disorder affecting hemoglobin in the blood.</li>
+            <li>Age: Age of the individual.</li>
+            <li>Sex: Gender of the individual.</li>
         </ul>
-        <p class="text-lg mt-4">
-            <a href="https://github.com/King7D/Campus-Bullying-Detection-System" class="contact-button px-6 py-3 border rounded transition" target="_blank">Concept</a>
+        <p>Additional attributes include cholesterol levels, fasting blood sugar, resting electrocardiographic results, and more.</p>
+
+        <h2>Usage</h2>
+        <p>To use this predictive model, input the necessary medical parameters as specified in the model's input requirements. The model will output a probability score indicating the likelihood of heart disease presence.</p>
+
+        <p class="text-lg mt-4"></p>
+            <a href="https://github.com/King7D/Heart-Disease-Prediction-Project" class="contact-button px-6 py-3 border rounded transition" target="_blank">Link to GitHub</a>
         </p>
 
         <a href="#" class="back-button mb-16" id="backToProjects">Back to Projects</a>
