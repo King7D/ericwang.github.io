@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IESC</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: linear-gradient(270deg, #0f172a, #1e3a8a, #3b82f6, #38bdf8);
+            background-size: 400% 400%;
+            animation: gradientShift 30s ease-in-out infinite;
+            min-height: 100vh;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            opacity: 0; /* Set initial opacity to 0 */
+            transition: opacity 0.5s ease-in-out; /* Smooth transition */
+        }
+
+        @keyframes gradientShift {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            25% {
+                background-position: 50% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            75% {
+                background-position: 50% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        .content {
+            max-width: 800px;
+            text-align: center;
+            padding: 2rem;
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+        }
+
+        h2 {
+            font-size: 2rem;
+            margin-top: 1.5rem;
+        }
+
+        p {
+            font-size: 1rem;
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+        }
+
+        ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        ul li {
+            margin-bottom: 1rem;
+        }
+
+        .back-button {
+            display: inline-block;
+            margin-top: 2rem;
+            padding: 10px 20px;
+            border: 2px solid #f39c12;
+            border-radius: 5px;
+            text-decoration: none;
+            color: #f39c12;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .back-button:hover {
+            background-color: #f39c12;
+            color: white;
+        }
+
+        img {
+            display: block;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="content">
+        <h1 style="font-size: 2.5rem">Intel Edge Solutions Challenge: Edge AI for Smart Cities & Transportationy</h1>
+        <p>The Intel® Edge Solutions Challenge (IESC) is an ongoing series of time-bound campaigns designed to support
+             and award Intel® ecosystem partners as they develop and deploy optimized solutions based on Intel® 
+             architecture and ingredients.</p>
+        <p>Technical innovation is at the center of how societies build and manage cities, and new technology is 
+            critical to advancing the way populations move, organize, and evolve.
+        </p>
+
+        <h2 style="font-size: 2rem">Project: Traffic Light Controller System</h2>
+
+        <h2 style="font-size: 1.5rem">Problem Statement</h2>
+
+        <p>In urban areas, traffic congestion at intersections is a significant issue that leads to increased travel
+             times, higher vehicle emissions, and reduced overall efficiency of the transportation network. Traditional
+              traffic light control systems are often static and unable to adapt to varying traffic patterns throughout
+               the day. This results in inefficient use of road capacity, with some traffic lights remaining green for 
+               too long when there is little traffic, or red for too long during peak hours, causing unnecessary delays
+                and traffic buildup. Moreover, the lack of real-time data analysis and adaptive response mechanisms 
+                exacerbates traffic management challenges, particularly in densely populated cities where traffic patterns
+                 are complex and dynamic.</p>
+
+        <h2 style="font-size: 1.5rem">Our Solution</h2>
+
+        <p>To address the challenges posed by outdated traffic light control systems, we propose the development of an 
+            AI-Driven Traffic Light Controller System. This system will employ a combination of edge computing and artificial
+             intelligence to dynamically manage traffic flow at intersections based on real-time data</p>
+        
+        <li>Real-time Traffic Data Collection: Install a network of high-resolution cameras at each intersection to capture 
+            and analyze traffic data, including vehicle count and queue lengths during red light phases.</li>
+        <li>Intelligent Traffic Light Control Algorithm: Develop an AI model that processes the collected data to predict traffic
+             patterns and dynamically adjust traffic light timings. The model will be designed to optimize traffic flow by minimizing
+              wait times and maximizing the use of road capacity</li>
+        <li>Edge Computing Infrastructure: Utilize edge computing to process data locally at the intersection, enabling immediate
+             decision-making without relying on cloud connectivity. This ensures that traffic light adjustments are made in real-time
+              and are not affected by network latency.</li>
+        <li>Customizable and Adaptive AI Models: Train AI models to adapt to specific traffic conditions and intersection geometries. 
+            These models will be capable of learning from traffic patterns and continuously improving their predictions and control strategies.</li>
+        <li>Data Privacy and Security: Implement robust data privacy measures to ensure that no personal data is collected or stored during 
+            the traffic monitoring process, and that all data transmission is secure.</li>
+
+
+        <h2 style="font-size: 1.5rem">Expected Benefits of the Solution</h2>
+        <li>Reduced Congestion: By dynamically adjusting traffic light timings, the system will reduce traffic congestion, leading to shorter
+             travel times and a more efficient use of road networks.</li>
+        <li>Lower Emissions: Decreased idling times for vehicles will result in lower emissions, contributing to improved air quality and 
+            environmental sustainability.</li>
+        <li>Enhanced Safety: Optimized traffic flow can reduce the likelihood of accidents, improving overall road safety.</li>
+        <li>Scalable and Maintainable: The system will be designed for easy scalability to additional intersections and will include a maintenance
+             plan for ongoing performance optimization and hardware/software upgrades.</li>
+
+        <a href="#" class="back-button mb-16" id="backToProjects">Back to Projects</a>
+
+    </div>
+
+
+    <script>
+        // Add fade-in effect on page load
+        window.addEventListener('load', function () {
+            document.body.style.opacity = 1;
+        });
+
+        // Add fade-out effect on back button click
+        document.getElementById('backToProjects').addEventListener('click', function (e) {
+            e.preventDefault();
+            document.body.style.opacity = 0;
+            setTimeout(function () {
+                window.location.href = "../index.html#projects";
+            }, 500);
+        });
+    </script>
+
+</body>
+
+</html>
